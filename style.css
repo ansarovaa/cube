@@ -1,0 +1,119 @@
+body {
+  color: #333;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial;
+}
+
+label {
+  margin-right: 30px;
+  font-size: 24px;
+}
+
+.margin {
+  margin: 70px 0;
+}
+
+.view3d {
+  width: 250px;
+  height: 250px;
+  display: inline-block;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.cube3d {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+}
+
+.pane {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border: 1px solid #fff;
+  opacity: 0.8;
+}
+
+figure {
+  color: white;
+}
+
+.front {
+  background: hsla(0, 100%, 50%, 0.7);
+  background:url(https://pbs.twimg.com/profile_images/736985013758111744/jXpUEVgk_400x400.jpg) 40% 10%;
+  z-index: 2;
+  transform: translate3d(0, 0, 125px);
+}
+
+.left {
+  background: hsla(240, 100%, 50%, 0.7);
+    background:url(http://www.spletnik.ru/img/__post/cb/cb715d12131c2d66578fadebca43afc9_522.jpg) 40% 10%;
+  transform: rotateY(-90deg) translate3d(0, 0, 125px);
+}
+
+.right {
+  background: hsla(120, 100%, 50%, 0.7);
+  background:url(https://www.vokrug.tv/pic/person/7/b/e/3/7be353c9334cf7e45e8fe0c5d174334d.jpeg) 40% 10%;
+  transform: rotateY(90deg) translate3d(0, 0, 125px);
+}
+
+.top {
+  background: hsla(60, 100%, 50%, 0.7);
+    background:url(https://pp.userapi.com/Irl5z8lPgNncl-W4_5CeiyLgSo-viQp-sDpoEw/Nbf2SXOedb0.jpg) 40% 10%;
+  transform: rotateX(90deg) translate3d(0, 0, 125px);
+}
+
+.bottom {
+  background: hsla(300, 100%, 50%, 0.7);
+  background:url(https://pp.vk.me/WpKr3IzGDfFWg65lX0Hxt9bnPLH6-LRnwzOO3g/Rsp98YJYlS8.jpg) 40% 10%;
+  transform: rotateX(-90deg) translate3d(0, 0, 125px);
+}
+
+.back {
+  background: hsla(180, 100%, 50%, 0.7);
+  background:url(https://s0.tchkcdn.com/g-j2fGfegSVBBxa2LNEc--oQ/1/299079/660x480/c/0/152_0_959_697/41f11ab58fc8e793ff722190feab6fce_geller_1.jpg) 40% 10%;
+  transform: rotateY(180deg) translate3d(0, 0, 125px);
+}
+
+
+/*3D cube Transformation */
+
+#front:checked ~ .view3d ~.cube3d {
+  
+}
+
+#left:checked ~ .view3d .cube3d {
+  transform: rotateY(90deg);
+}
+
+#right:checked ~ .view3d .cube3d {
+  transform: rotateY(-90deg);
+}
+
+#top:checked ~ .view3d .cube3d {
+  transform: rotateX(-90deg);
+}
+
+#bottom:checked ~ .view3d .cube3d {
+  transform: rotateX(90deg);
+}
+
+#back:checked ~ .view3d .cube3d {
+  transform:rotateY(180deg);
+}
+
+/*Hidden and visible*/
+#hidden:checked ~ .view3d .cube3d .pane {
+  backface-visibility:hidden;
+}
+
+#visible:checked ~ .view3d .cube3d .pane {
+  backface-visibility:visible;
+}
+

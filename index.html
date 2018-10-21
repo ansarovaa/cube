@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+  <input type="radio" id="front" name="face" checked/>
+  <label for="front">Чендлер</label>
+  <input type="radio" id="left" name="face" />
+  <label for="left">Джо</label>
+  <input type="radio" id="right" name="face" />
+  <label for="right">Фиби</label>
+  <input type="radio" id="top" name="face" />
+  <label for="top">Моника</label>
+  <input type="radio" id="bottom" name="face" />
+  <label for="bottom">Рейчел</label>
+  <input type="radio" id="back" name="face" />
+  <label for="back">Росс</label>
+  <br>
+  <br>
+
+  <input type="radio" id="hidden" name="backface" />
+  <label for="hidden">Backface hidden</label>
+
+  <input type="radio" id="visible" name="backface" checked/>
+  <label for="visible">Backface visible</label>
+
+  <div class="margin"></div>
+  <div class="view3d">
+    <div class="cube3d">
+      <div class="pane front">
+        <figure>Чендлер Бинг</figure>
+      </div>
+      <div class="pane left">
+        <figure>Джо Трибиани</figure>
+      </div>
+      <div class="pane right">
+        <figure>Фиби Буффе</figure>
+      </div>
+      <div class="pane top">
+        <figure>Моника Геллер</figure>
+      </div>
+      <div class="pane bottom">
+        <figure>Рейчел Грин</figure>
+      </div>
+      <div class="pane back">
+        <figure>Росс Геллер</figure>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
